@@ -1,18 +1,10 @@
-basic.showLeds(`
-    # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
-    `)
-let px = 0
-let py = 0
-basic.forever(function () {
-    led.unplot(px, py)
-    px = px + 1
-    basic.pause(200)
-    if (px >= 5) {
-        px = 0
-        py = py + 1
-    }
+input.onButtonPressed(Button.A, function () {
+    entradas += 1
+    basic.showString("" + (entradas))
 })
+input.onButtonPressed(Button.B, function () {
+    entradas += -1
+    basic.showString("" + (entradas))
+})
+let entradas = 0
+entradas = 0
